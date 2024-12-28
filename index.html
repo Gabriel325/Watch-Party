@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
     <div style="display: flexbox;">
@@ -13,22 +14,12 @@
 
             <!-- Load the Twitch embed script -->
             <script src="https://player.twitch.tv/js/embed/v1.js"></script>
-
-            <!-- Create a Twitch.Player object. This will render within the placeholder div -->
-            <script type="text/javascript">
-            new Twitch.Player("twitch-embed", {
-                channel: "eskimozin"
-            });
-            </script>
         </div>
         <div>
-            <iframe
-                id="chat_embed"
-                src="https://www.twitch.tv/embed/eskimozin/chat?parent=http://localhost:5500"
-                height="500"
-                width="350">
-            </iframe>
+            <iframe id="chat_embed"></iframe>
         </div>
     </div>
+    <script type="module" src="js/chat.js"></script>
+    <script type="module" src="js/live.js"></script>
 </body>
 </html>
